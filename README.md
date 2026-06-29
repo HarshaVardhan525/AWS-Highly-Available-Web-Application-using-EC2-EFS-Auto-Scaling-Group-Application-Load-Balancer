@@ -28,19 +28,11 @@ This architecture provides:
 
 ---
 
-# 🏗 Architecture
+# 🏗️ Architecture
 
+The following diagram illustrates the AWS Highly Available Web Application architecture.
 
-with:
-
-```markdown
-# 🏗 Architecture
-
-![AWS Highly Available Web Application](architecture/aws-ha-webapp-architecture.png)
-
-```
-
----
+![AWS Highly Available Web Application Architecture](architecture/aws-ha-webapp-architecture.png)
 
 # 🚀 AWS Services Used
 
@@ -257,31 +249,101 @@ aws-highly-available-web-application/
 
 ---
 
-# 📷 Screenshots
+# 📸 Project Screenshots
 
-Include screenshots for:
+## AWS Architecture
 
-- VPC
-- Public Subnets
-- Private Subnets
-- Route Tables
-- Internet Gateway
-- Security Groups
-- EC2 Instance
-- Amazon EFS
-- EFS Mount Targets
-- Mounted EFS (`df -h`)
-- Apache Installation
-- Website Output
-- AMI
-- Launch Template
-- Auto Scaling Group
-- Target Group
-- Application Load Balancer
-- Healthy Targets
-- Load Balancer DNS Output
+![Architecture](architecture/aws-ha-webapp-architecture.png)
 
 ---
+
+## VPC
+
+![VPC](screenshots/01-vpc.png)
+
+---
+
+## Public & Private Subnets
+
+![Subnets](screenshots/02-subnets.png)
+
+---
+
+## Route Tables
+
+![Route Table](screenshots/03-route-table.png)
+
+---
+
+## Security Group
+
+![Security Group](screenshots/04-security-group.png)
+
+---
+
+## EC2 Instance
+
+![EC2](screenshots/05-ec2-instance.png)
+
+---
+
+## Amazon EFS
+
+![EFS](screenshots/06-efs.png)
+
+---
+
+## Mounted EFS
+
+![Mounted EFS](screenshots/07-efs-mounted.png)
+
+---
+
+## Website Running on Apache
+
+![Website](screenshots/08-website.png)
+
+---
+
+## Amazon Machine Image
+
+![AMI](screenshots/09-ami.png)
+
+---
+
+## Launch Template
+
+![Launch Template](screenshots/10-launch-template.png)
+
+---
+
+## Auto Scaling Group
+
+![ASG](screenshots/11-auto-scaling-group.png)
+
+---
+
+## Target Group
+
+![Target Group](screenshots/12-target-group.png)
+
+---
+
+## Application Load Balancer
+
+![ALB](screenshots/13-load-balancer.png)
+
+---
+
+## Health Check
+
+![Health Check](screenshots/14-health-check.png)
+
+---
+
+## Application Output
+
+![Website Output](screenshots/15-lb-dns-output.png)
 
 # ✅ Verification
 
