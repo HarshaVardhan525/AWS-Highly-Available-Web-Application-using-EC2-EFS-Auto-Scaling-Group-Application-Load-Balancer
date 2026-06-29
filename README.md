@@ -38,10 +38,6 @@ with:
 
 ![AWS Highly Available Web Application](architecture/aws-ha-webapp-architecture.png)
 
-Example:
-
-```markdown
-![Architecture](architecture/aws-ha-webapp-architecture.png)
 ```
 
 ---
