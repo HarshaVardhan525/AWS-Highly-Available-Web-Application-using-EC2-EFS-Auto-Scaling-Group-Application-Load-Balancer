@@ -1,0 +1,386 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamFlix</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b0b0b;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:3rem;
+    color:#e50914;
+    letter-spacing:3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e50914;
+}
+
+.search{
+    padding:10px 15px;
+    border:none;
+    border-radius:30px;
+    background:#222;
+    color:white;
+    outline:none;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    padding:0 80px;
+    background:
+    linear-gradient(to right,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.4)),
+    linear-gradient(135deg,#111827,#1f2937,#7f1d1d);
+}
+
+.hero-content{
+    max-width:650px;
+    animation:slideUp 1.2s ease;
+}
+
+.hero-content h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:7rem;
+    letter-spacing:4px;
+}
+
+.hero-content p{
+    font-size:1.1rem;
+    line-height:1.8;
+    margin:20px 0;
+    color:#ddd;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:14px 32px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.4s;
+}
+
+.play{
+    background:#e50914;
+    color:white;
+}
+
+.play:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(229,9,20,.4);
+}
+
+.info{
+    background:#ffffff20;
+    color:white;
+}
+
+.info:hover{
+    transform:translateY(-5px);
+}
+
+/* SECTIONS */
+
+.section{
+    padding:60px;
+}
+
+.section h2{
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+/* MOVIES */
+
+.movies{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.movie-card{
+    background:#161616;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.movie-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 20px 40px rgba(229,9,20,.25);
+}
+
+.poster{
+    height:320px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:3rem;
+    font-weight:bold;
+    color:white;
+}
+
+.poster1{background:linear-gradient(135deg,#ef4444,#7f1d1d);}
+.poster2{background:linear-gradient(135deg,#3b82f6,#1e3a8a);}
+.poster3{background:linear-gradient(135deg,#22c55e,#14532d);}
+.poster4{background:linear-gradient(135deg,#eab308,#854d0e);}
+.poster5{background:linear-gradient(135deg,#a855f7,#581c87);}
+.poster6{background:linear-gradient(135deg,#06b6d4,#164e63);}
+.poster7{background:linear-gradient(135deg,#f97316,#7c2d12);}
+.poster8{background:linear-gradient(135deg,#ec4899,#831843);}
+
+.movie-info{
+    padding:18px;
+}
+
+.movie-info h3{
+    margin-bottom:8px;
+}
+
+.movie-info p{
+    color:#bdbdbd;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:40px;
+    color:#888;
+}
+
+/* ANIMATION */
+
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+}
+
+.hero{
+    padding:20px;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:4rem;
+}
+
+.section{
+    padding:30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">STREAMFLIX</div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Movies</a>
+        <a href="#">Series</a>
+        <a href="#">My List</a>
+    </div>
+
+    <input type="text" class="search" id="searchBox" placeholder="Search movies...">
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>STREAMFLIX</h1>
+        <p>
+            Watch unlimited movies, web series, documentaries and exclusive originals.
+            Enjoy cinematic entertainment anywhere, anytime.
+        </p>
+
+        <div class="buttons">
+            <button class="btn play">▶ Play Now</button>
+            <button class="btn info">ℹ More Info</button>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Trending Now</h2>
+
+    <div class="movies">
+
+        <div class="movie-card">
+            <div class="poster poster1">🎬</div>
+            <div class="movie-info">
+                <h3>Dark Empire</h3>
+                <p>Action • Thriller</p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster poster2">🚀</div>
+            <div class="movie-info">
+                <h3>Galaxy Run</h3>
+                <p>Sci-Fi • Adventure</p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster poster3">🌍</div>
+            <div class="movie-info">
+                <h3>Green Planet</h3>
+                <p>Documentary</p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster poster4">⚔️</div>
+            <div class="movie-info">
+                <h3>War Legends</h3>
+                <p>Historical • Action</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2>Popular Movies</h2>
+
+    <div class="movies">
+
+        <div class="movie-card">
+            <div class="poster poster5">👑</div>
+            <div class="movie-info">
+                <h3>Royal Crown</h3>
+                <p>Drama</p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster poster6">🌊</div>
+            <div class="movie-info">
+                <h3>Ocean Quest</h3>
+                <p>Adventure</p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster poster7">🔥</div>
+            <div class="movie-info">
+                <h3>Fire Storm</h3>
+                <p>Action</p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="poster poster8">🎭</div>
+            <div class="movie-info">
+                <h3>Silent Mask</h3>
+                <p>Mystery</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    © 2026 StreamFlix • Premium Streaming Experience
+</footer>
+
+<script>
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", () => {
+
+let filter = searchBox.value.toLowerCase();
+
+document.querySelectorAll(".movie-card").forEach(card => {
+
+const title = card.querySelector("h3").textContent.toLowerCase();
+
+card.style.display =
+title.includes(filter) ? "block" : "none";
+
+});
+
+});
+</script>
+
+</body>
+</html>
+```
