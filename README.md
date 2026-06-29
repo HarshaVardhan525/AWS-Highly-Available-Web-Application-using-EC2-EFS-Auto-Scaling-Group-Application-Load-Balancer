@@ -271,7 +271,7 @@ aws-highly-available-web-application/
 
 ## Route Tables
 
-![Route Table](screenshots/03-route-table.png)
+![Route Table](screenshots/03-route-tables.png)
 
 ---
 
@@ -299,51 +299,46 @@ aws-highly-available-web-application/
 
 ---
 
-## Website Running on Apache
-
-![Website](screenshots/08-website.png)
-
----
 
 ## Amazon Machine Image
 
-![AMI](screenshots/09-ami.png)
+![AMI](screenshots/08-ami.png)
 
 ---
 
 ## Launch Template
 
-![Launch Template](screenshots/10-launch-template.png)
+![Launch Template](screenshots/09-launch-template.png)
 
 ---
 
 ## Auto Scaling Group
 
-![ASG](screenshots/11-auto-scaling-group.png)
+![ASG](screenshots/10-auto-scaling-group.png)
 
 ---
 
 ## Target Group
 
-![Target Group](screenshots/12-target-group.png)
+![Target Group](screenshots/11-target-group.png)
 
 ---
 
 ## Application Load Balancer
 
-![ALB](screenshots/13-load-balancer.png)
+![ALB](screenshots/12-load-balancer.png)
 
 ---
 
 ## Health Check
 
-![Health Check](screenshots/14-health-check.png)
+![Health Check](screenshots/13-health-check.png)
 
 ---
 
 ## Application Output
 
-![Website Output](screenshots/15-lb-dns-output.png)
+![Website Output](screenshots/14-lb-dns-output.png)
 
 # ✅ Verification
 
