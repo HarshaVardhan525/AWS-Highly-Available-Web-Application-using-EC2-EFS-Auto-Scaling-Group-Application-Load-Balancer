@@ -392,7 +392,7 @@ Cloud & DevOps Enthusiast
 
 GitHub: https://github.com/HarshaVardhan525
 
-LinkedIn: *(Add your LinkedIn profile URL here)*
+LinkedIn: https://www.linkedin.com/in/harsha-vardhan-gangumolu-69037a415/
 
 ---
 
